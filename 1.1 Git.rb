@@ -12,6 +12,8 @@ Bạn đang đứng ở branch develop, làm sao để up-to-date branch master 
 -->
 git fetch origin
 git merge origin/master
+or
+git pull origin master
 
 
 
@@ -20,9 +22,6 @@ Làm sao để xóa local & remote branch?
 git push origin --delete <tênBranch>
 git branch -D <tênBranch>
 
-Nếu ta đã add một file vào Index, sau đó ta gọi git checkout thì điều gì sẽ xảy ra
--->
-Không có gì xảy ra cả. Git checkout chỉ reset những thay đổi (Modifed Staging) chứ không tác động tới Index Staging
 
 git stash có tác dụng với file ở trạng trái Staged hoặc Untracked hay không?
 -->
