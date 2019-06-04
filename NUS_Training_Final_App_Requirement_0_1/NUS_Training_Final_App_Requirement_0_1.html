@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<!-- saved from url=(0019)file:///tmp/19.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+
+@media print {
+  body .markdown-body {
+    padding: 0;
+    border: none;
+  }
+}
+</style><title>NUS_Training_Final_App_Requirement_0_1</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-fotobook" class="anchor" href="file:///tmp/19.html#fotobook" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fotobook</h1>
+<h2>
+<a id="user-content-introduction" class="anchor" href="file:///tmp/19.html#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f504d44727565703238484747763952657a775a4a6855656d6e6e4742622d654b4d4778324c4f55437a61446535556b656d446532736f763975796a4b4338586d426a614457453355386a79413d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f504d44727565703238484747763952657a775a4a6855656d6e6e4742622d654b4d4778324c4f55437a61446535556b656d446532736f763975796a4b4338586d426a614457453355386a79413d7331323030" alt=" " title="Feed Album" data-canonical-src="https://lh3.googleusercontent.com/PMDruep28HGGv9RezwZJhUemnnGBb-eKMGx2LOUCzaDe5UkemDe2sov9uyjKC8XmBjaDWE3U8jyA=s1200" style="max-width:100%;"></a></p>
+<p>Fotobook (Photobook) is a free photo sharing website designed to be a place for people around the world to express themselves through photos. It's there for those who love photography and also want to share their precious moments in life.</p>
+<p>Fotobook's features will be pretty similar to <a href="https://www.facebook.com/" rel="nofollow">Facebook</a>'s ones but much simpler. Check out its prototype <a href="https://www.figma.com/proto/LGNsg3hOszz33F93ArIZZtOe/Fotobook---Final-App?scaling=contain" rel="nofollow">here</a> to have a closer look.</p>
+<h3>
+<a id="user-content-main-entities-in-fotobook" class="anchor" href="file:///tmp/19.html#main-entities-in-fotobook" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Main entities in Fotobook</h3>
+<h4>
+<a id="user-content-user" class="anchor" href="file:///tmp/19.html#user" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>User</h4>
+<p>There are 03 types of user existing in the application system:</p>
+<ul>
+<li>Guest: users visiting the application without logging in.</li>
+<li>Normal user: users who have normal account.</li>
+<li>Admin user:  users who have administrator account and, therefore, have been granted several advanced permissions to manage the application.</li>
+</ul>
+<p>Each type of user has its own permissions. The following sections will cover them in more detail.</p>
+<h4>
+<a id="user-content-photo" class="anchor" href="file:///tmp/19.html#photo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Photo</h4>
+<p>Photo is one of the fundamental entities in the application. Basically, it's a combination of three components:</p>
+<ul>
+<li>A image that user want to share.</li>
+<li>Photo title.</li>
+<li>Photo description.</li>
+</ul>
+<p>In addition, each Photo can be shared in either <code>public</code> or <code>private</code> mode.</p>
+<h4>
+<a id="user-content-album" class="anchor" href="file:///tmp/19.html#album" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Album</h4>
+<p>Rather than posting a series of Photos separately, user can choose to group those images under an Album. Three components forming up an Album are:</p>
+<ul>
+<li>A collection of images that user wants to group as an album.</li>
+<li>Album title.</li>
+<li>Alum description.</li>
+</ul>
+<p>Just like Photo, Album can also be shared in either <code>public</code> or <code>private</code> mode.</p>
+<h2>
+<a id="user-content-general-requirements" class="anchor" href="file:///tmp/19.html#general-requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General requirements</h2>
+<ul>
+<li>
+<p>It's  unnecessary to build a UI looks like the <a href="https://www.figma.com/file/LGNsg3hOszz33F93ArIZZtOe/Fotobook-Final-App" rel="nofollow">sketch</a> precisely.  However, the clarity and ease of use are must-have. Plus, all described functionalities have to be presented in the interface as well.
+FYI, all icons used in the <a href="https://www.figma.com/file/LGNsg3hOszz33F93ArIZZtOe/Fotobook-Final-App" rel="nofollow">sketch</a> are from <a href="https://fontawesome.com/cheatsheet" rel="nofollow">Font Awesome</a>.</p>
+</li>
+<li>
+<p>Responsive layout is set up for at least 2 screens (mobile and desktop) based on Bootstrap <a href="http://getbootstrap.com/docs/3.3/css/#grid" rel="nofollow">Grid system</a>.</p>
+</li>
+<li>
+<p>Strictly follow the <a href="file:///tmp/19.html#best-practices">best practices</a> have been told in all cases. Consult your trainer / supervisor if you want to make your own choice.</p>
+</li>
+<li>
+<p>Write <code>Unit test</code> at least for Model.</p>
+</li>
+</ul>
+<h2>
+<a id="user-content-application-features" class="anchor" href="file:///tmp/19.html#application-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Application features</h2>
+<p>Features / screens of Fotobook will be described in the below sections. Each section covers:</p>
+<ul>
+<li>In detail description of feature / screen.</li>
+<li>Technical notes (if any).</li>
+<li>Advanced requirements (if any).</li>
+</ul>
+<p><em>Advanced requirements might be optional in certain circumstances. You should ask your trainer / supervisor for a confirmation.</em></p>
+<h3>
+<a id="user-content-signup" class="anchor" href="file:///tmp/19.html#signup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Signup</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f2d3761735f6c4846627835394a6e46304959376536514f5a74534f53745f724a516149615f78696f526a4e4a394e514a642d6a4d6f2d50526e7757304c7038365661322d437555376967426a3d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f2d3761735f6c4846627835394a6e46304959376536514f5a74534f53745f724a516149615f78696f526a4e4a394e514a642d6a4d6f2d50526e7757304c7038365661322d437555376967426a3d7331323030" alt=" " title="Signup" data-canonical-src="https://lh3.googleusercontent.com/-7as_lHFbx59JnF0IY7e6QOZtSOSt_rJQaIa_xioRjNJ9NQJd-jMo-PRnwW0Lp86Va2-CuU7igBj=s1200" style="max-width:100%;"></a>
+This page allows user to create new Fotobook account. In order to do that, the following information must be provided:</p>
+<ul>
+<li>First name (required): maximum 25 characters long.</li>
+<li>Last name (required): maximum 25 characters long.</li>
+<li>Email (required): maximum 255 characters long. Besides, it has to be unique and comply with the general email format.</li>
+<li>Password (required): maximum 64 characters long.</li>
+</ul>
+<p>It is highly recommended to have <code>First Name</code> field auto-focused right after the page has successfully loaded.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>Use <a href="https://github.com/plataformatec/devise">Devise</a> gem to implement signup including <code>:confirmable</code>.</li>
+<li>Use <a href="https://jqueryvalidation.org/" rel="nofollow">jQuery Validation</a> to validate the signup form preventing user from submitting unless all required fields are filled up.</li>
+<li>Use <a href="http://getbootstrap.com/docs/3.3" rel="nofollow">Bootstrap</a> to build UI. A good example can be found <a href="https://bootsnipp.com/snippets/featured/google-style-login" rel="nofollow">here</a>.</li>
+</ul>
+<p><strong>Advanced requirements:</strong>
+Add alternative signup methods:</p>
+<ul>
+<li>Sign up by Facebook.</li>
+<li>Sign up by Google.</li>
+</ul>
+<h3>
+<a id="user-content-login" class="anchor" href="file:///tmp/19.html#login" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Login</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6443424a655054673556634e78396b76484d6b424a70447464474956356749537370557267396a453242436561596e6f4c594f57456870674d4663464d396d74714b44572d626c57466436613d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6443424a655054673556634e78396b76484d6b424a70447464474956356749537370557267396a453242436561596e6f4c594f57456870674d4663464d396d74714b44572d626c57466436613d7331323030" alt=" " title="Login" data-canonical-src="https://lh3.googleusercontent.com/dCBJePTg5VcNx9kvHMkBJpDtdGIV5gISspUrg9jE2BCeaYnoLYOWEhpgMFcFM9mtqKDW-blWFd6a=s1200" style="max-width:100%;"></a>
+This page is the entry point of Fotobook where user can log into the application. The credentials user has to provide including:</p>
+<ul>
+<li>Email (required).</li>
+<li>Password (required).</li>
+</ul>
+<p><code>Email</code> field is auto-focused by default. After successfully logging in, user will be directed to their <a href="file:///tmp/19.html#feeds">Feeds</a>.
+Users can also reset their passwords if they want to.</p>
+<p><em>Note that user will no longer has the ability to log into the application after being set inactive by admin.</em></p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>Use <a href="https://github.com/plataformatec/devise">Devise</a> gem to implement signin and reset password.</li>
+<li>Use <a href="https://jqueryvalidation.org/" rel="nofollow">jQuery Validation</a> to validate the signup form preventing user from submitting unless all required fields are field up.</li>
+<li>Use <a href="http://getbootstrap.com/docs/3.3" rel="nofollow">Bootstrap</a> to build UI. A good example can be found <a href="https://bootsnipp.com/snippets/featured/google-style-login" rel="nofollow">here</a>.</li>
+</ul>
+<h3>
+<a id="user-content-feeds" class="anchor" href="file:///tmp/19.html#feeds" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feeds</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f54627368514d78454d5370432d70586c464a774341594a487a5f724a4377786d6535337579535a48526d66647442354d717a4f6e575f6131786b4770644e6b30684b302d78476f506f4972573d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f54627368514d78454d5370432d70586c464a774341594a487a5f724a4377786d6535337579535a48526d66647442354d717a4f6e575f6131786b4770644e6b30684b302d78476f506f4972573d7331323030" alt=" " title="Feeds Photo" data-canonical-src="https://lh3.googleusercontent.com/TbshQMxEMSpC-pXlFJwCAYJHz_rJCwxme53uySZHRmfdtB5MqzOnW_a1xkGpdNk0hK0-xGoPoIrW=s1200" style="max-width:100%;"></a>
+Feeds is the main page of the application. Just like the News Feed of Facebook, it's the place to display users' posts where each post can be either Photo or Album. User can freely switch between two modes: <code>Photo</code> or <code>Album</code> (reload page). Be alert that only Photo / Album whose sharing mode is set <code>public</code> will be shown up there. No mater how you style the page, each post has to satisfy the following constraints:</p>
+<ul>
+<li>
+<p>Displaying clearly:</p>
+<ul>
+<li>Photo / Album thumbnail.</li>
+<li>Author information (name, avatar).</li>
+<li>Photo / Album title.</li>
+<li>Photo / Album description.</li>
+<li>Photo / Album publication date.</li>
+</ul>
+</li>
+<li>
+<p>Posts are designed to display in reverse chronological order (from newest to oldest).</p>
+</li>
+</ul>
+<p><em>Note that non-login users can freely access Feeds</em>
+User can view post's content by clicking on each item. If it is a Photo, a popup modal will show up displaying the image inside together with its <code>title</code> and <code>description</code>.</p>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f584d37346e43344134625a785f564f31654e72566954306f2d657a5846754b6165685875366938465f4d4972325f7738546c637a3941557a56477a422d6976785a4945795f722d635839456a3d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f584d37346e43344134625a785f564f31654e72566954306f2d657a5846754b6165685875366938465f4d4972325f7738546c637a3941557a56477a422d6976785a4945795f722d635839456a3d7331323030" alt=" " title="Photo View" data-canonical-src="https://lh3.googleusercontent.com/XM74nC4A4bZx_VO1eNrViT0o-ezXFuKaehXu6i8F_MIr2_w8Tlcz9AUzVGzB-ivxZIEy_r-cX9Ej=s1200" style="max-width:100%;"></a></p>
+<p>In case the post is an Album, a popup modal will show up displaying the images collection together with the Album's <code>title</code> and <code>description</code>. User can clicking on the left / right arrow to navigate around.</p>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f397741367561724f754a384546703935756d7042364841454c4b525a5856384b7a2d364979584475315747335f766d344255685a556d4f574b326c7a784843644b63654834643246655639333d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f397741367561724f754a384546703935756d7042364841454c4b525a5856384b7a2d364979584475315747335f766d344255685a556d4f574b326c7a784843644b63654834643246655639333d7331323030" alt=" " title="Album View" data-canonical-src="https://lh3.googleusercontent.com/9wA6uarOuJ8EFp95umpB6HAELKRZXV8Kz-6IyXDu1WG3_vm4BUhZUmOWK2lzxHCdKceH4d2FeV93=s1200" style="max-width:100%;"></a></p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>Paginate 20 posts per page.</li>
+<li>Use <a href="http://getbootstrap.com/docs/3.3/javascript/#modals" rel="nofollow">Bootstrap modal</a>.</li>
+</ul>
+<p><strong>Advance requirements:</strong></p>
+<ul>
+<li>Replace pagination by infinite loading.</li>
+<li>Implement like button of Photo / Album.</li>
+</ul>
+<h3>
+<a id="user-content-my-photos" class="anchor" href="file:///tmp/19.html#my-photos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My Photos</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6465443468774b69767568456d4a54534457786350724f436969484f5244494157544f69557a5071744a6149684f77317850502d3238444a48674b6c74724b5334667663674a5442306253593d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6465443468774b69767568456d4a54534457786350724f436969484f5244494157544f69557a5071744a6149684f77317850502d3238444a48674b6c74724b5334667663674a5442306253593d7331323030" alt=" " title="My Photos" data-canonical-src="https://lh3.googleusercontent.com/deD4hwKivuhEmJTSDWxcPrOCiiHORDIAWTOiUzPqtJaIhOw1xPP-28DJHgKltrKS4fvcgJTB0bSY=s1200" style="max-width:100%;"></a>
+User can manage their uploaded images in <code>My Photos</code>. No mater how you style the page, each Photo item has to satisfy the following constraints:</p>
+<ul>
+<li>
+<p>Displaying clearly:</p>
+<ul>
+<li>Photo title.</li>
+<li>Current sharing mode: <code>public</code> or <code>private</code>.</li>
+</ul>
+</li>
+<li>
+<p>Users can open any Photo they want by clicking on each item (it's highly recommended to reuse the modal built in <a href="file:///tmp/19.html#feeds">Feeds</a>).</p>
+</li>
+<li>
+<p>There has to be an entry to access the corresponding <a href="file:///tmp/19.html#edit-photo">Edit Photo</a> page.</p>
+</li>
+</ul>
+<p>Photo items are ordered from newest to oldest.
+<a href="file:///tmp/19.html#new-photo">Add New Photo</a> button must be placed somewhere in the page.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>Paginate 20 items per page.</li>
+<li>If there's not enough space to display full Photo title, then it can be truncated using <a href="https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/" rel="nofollow">CSS</a>.</li>
+</ul>
+<h3>
+<a id="user-content-my-albums" class="anchor" href="file:///tmp/19.html#my-albums" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My Albums</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f4377307750395057487954362d4b776c47563671324c5a3654385673576e5853706344353359355739446d364b7930485f5834725159443837556259386e6b5433427a4c436563796e634f723d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f4377307750395057487954362d4b776c47563671324c5a3654385673576e5853706344353359355739446d364b7930485f5834725159443837556259386e6b5433427a4c436563796e634f723d7331323030" alt=" " title="My Albums" data-canonical-src="https://lh3.googleusercontent.com/Cw0wP9PWHyT6-KwlGV6q2LZ6T8VsWnXSpcD53Y5W9Dm6Ky0H_X4rQYD87UbY8nkT3BzLCecyncOr=s1200" style="max-width:100%;"></a></p>
+<p>User can manage their created albums in <code>My Album</code>. No mater how you style the page, each Album item has to satisfy the following constraints:</p>
+<ul>
+<li>
+<p>Displaying clearly:</p>
+<ul>
+<li>Album title.</li>
+<li>Current sharing mode: <code>public</code> or <code>private</code>
+</li>
+</ul>
+</li>
+<li>
+<p>Users can open any Album they want by clicking on each item (it's highly recommended to reuse the modal built in <a href="file:///tmp/19.html#feeds">Feeds</a>).</p>
+</li>
+<li>
+<p>There has to be an entry to access the corresponding <a href="file:///tmp/19.html#edit-album">Edit Album</a> page.</p>
+</li>
+</ul>
+<p>Album items are ordered from newest to oldest.
+<a href="file:///tmp/19.html#new-album">Add New Album</a> button must be placed somewhere in the page.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>Paginate 20 items per page</li>
+<li>If there's not enough space to display full Album title, then it can be truncated using <a href="https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/" rel="nofollow">CSS</a>.</li>
+</ul>
+<h3>
+<a id="user-content-new-photo" class="anchor" href="file:///tmp/19.html#new-photo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>New Photo</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6e635338576b54364469655638647458724c4a457a786762657a6444364c5241716471555678796d6f776f57327a7832773131314f4145773654436a4870664c35707049346d337373486a413d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6e635338576b54364469655638647458724c4a457a786762657a6444364c5241716471555678796d6f776f57327a7832773131314f4145773654436a4870664c35707049346d337373486a413d7331323030" alt=" " title="New Photo" data-canonical-src="https://lh3.googleusercontent.com/ncS8WkT6DieV8dtXrLJEzxgbezdD6LRAqdqUVxymowoW2zx2w111OAEw6TCjHpfL5ppI4m3ssHjA=s1200" style="max-width:100%;"></a></p>
+<p>It's the place where user can add new Photo to their collection. New Photo form has the following fields:</p>
+<ul>
+<li>Title (required): maximum 140 characters long.</li>
+<li>Description (required): maximum 300 characters long.</li>
+<li>Sharing mode (required): <code>public</code> or <code>private</code>.</li>
+<li>Attached image (required): maximum 01 image. Accepted formats are <code>jpeq</code>, <code>png</code> and <code>gif</code>. Maximum size is 5Mb.</li>
+</ul>
+<p>After successfully creating a new Photo, user will be directed to <a href="file:///tmp/19.html#my-photos">My Photos</a> on reload. There has to be appropriate notification messages letting user know whether the operation is successful or failed.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>Form fields must have placeholders.</li>
+<li>Use <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> gem for image attachment.</li>
+<li>Use <a href="https://jqueryvalidation.org/" rel="nofollow">jQuery Validation</a> to validate the form preventing user from submitting unless all required fields are filled up.</li>
+</ul>
+<h3>
+<a id="user-content-edit-photo" class="anchor" href="file:///tmp/19.html#edit-photo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Edit Photo</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f526a385059504f505f5a4c4c414a724b35435242545930757763525166327a7955463736577035697454777377357669384b37723278477162524a6b62664b743445796d686459467075634e3d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f526a385059504f505f5a4c4c414a724b35435242545930757763525166327a7955463736577035697454777377357669384b37723278477162524a6b62664b743445796d686459467075634e3d7331323030" alt=" " title="Edit Photo" data-canonical-src="https://lh3.googleusercontent.com/Rj8PYPOP_ZLLAJrK5CRBTY0uwcRQf2zyUF76Wp5itTwsw5vi8K7r2xGqbRJkbfKt4EymhdYFpucN=s1200" style="max-width:100%;"></a>
+This page shares the same components / features with <a href="file:///tmp/19.html#new-photo">New Photo</a> except that it has an extra button letting user delete the Photo.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>There has to be an alert box for double confirmation whenever user clicks on <code>Delete</code> button.</li>
+</ul>
+<h3>
+<a id="user-content-new-album" class="anchor" href="file:///tmp/19.html#new-album" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>New Album</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f68767045324567763253524869504530675375496f314f4d4d677752786d646963794653304e4955624d6171345144504c765249356d6b48466b7068765f74446e484a4e4f4e4b344138394e3d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f68767045324567763253524869504530675375496f314f4d4d677752786d646963794653304e4955624d6171345144504c765249356d6b48466b7068765f74446e484a4e4f4e4b344138394e3d7331323030" alt=" " title="New Album" data-canonical-src="https://lh3.googleusercontent.com/hvpE2Egv2SRHiPE0gSuIo1OMMgwRxmdicyFS0NIUbMaq4QDPLvRI5mkHFkphv_tDnHJNONK4A89N=s1200" style="max-width:100%;"></a>
+It's the place where user can add new Album to their collection. New Album form has the following fields:</p>
+<ul>
+<li>Title (required): maximum 140 characters long.</li>
+<li>Description (required): maximum 300 characters long.</li>
+<li>Sharing mode (required): <code>public</code> or <code>private</code>.</li>
+<li>Attached images (required): maximum 25 images. Accepted formats are <code>jpeq</code>, <code>png</code>, <code>gif</code>. Maximum size for each image is 5Mb.</li>
+</ul>
+<p>User can add only one image to an Album each time. After hitting <code>Save</code> button, the page will be reloaded to let user add more images if he wants to. There has to be appropriate notification messages letting user know wether the operation is successful or failed.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>Form fields must have placeholders.</li>
+<li>Use <a href="https://github.com/thoughtbot/paperclip">Paperclip</a> gem for image attachment.</li>
+<li>Use <a href="https://jqueryvalidation.org/" rel="nofollow">jQuery Validation</a> to validate the form preventing user from submitting unless all required fields are filled up.</li>
+</ul>
+<p><strong>Advanced requirements:</strong></p>
+<ul>
+<li>Enable multiple images uploading.</li>
+<li>Allow user to create a new Album out of existing Photos.</li>
+</ul>
+<h3>
+<a id="user-content-edit-album" class="anchor" href="file:///tmp/19.html#edit-album" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Edit Album</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f67743753665a73507033475634687a667464676152767277324d625f4f4b427363496973514e7a4e5a6d4d76787847715748704e6f78655254396961616f6d685548495f57546e70696c76683d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f67743753665a73507033475634687a667464676152767277324d625f4f4b427363496973514e7a4e5a6d4d76787847715748704e6f78655254396961616f6d685548495f57546e70696c76683d7331323030" alt=" " title="Edit Album" data-canonical-src="https://lh3.googleusercontent.com/gt7SfZsPp3GV4hzftdgaRvrw2Mb_OKBscIisQNzNZmMvxxGqWHpNoxeRT9iaaomhUHI_WTnpilvh=s1200" style="max-width:100%;"></a></p>
+<p>This page shares the same components / features with <a href="file:///tmp/19.html#new-album">New Album</a> except that it has an extra button letting user delete the Album.
+All belonging images will be removed if their parent Album is deleted.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>There has to be an alert box for double confirmation whenever user clicks on <code>Delete</code> button.</li>
+</ul>
+<h3>
+<a id="user-content-edit-profile" class="anchor" href="file:///tmp/19.html#edit-profile" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Edit Profile</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f77452d637a395f5f7948736469675633763877596f436c5a5745586d317a47344e6c58527034774e713265414f734934637937317648394f2d4764556e5268415541434e317a5732465066563d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f77452d637a395f5f7948736469675633763877596f436c5a5745586d317a47344e6c58527034774e713265414f734934637937317648394f2d4764556e5268415541434e317a5732465066563d7331323030" alt=" " title="Edit Profile" data-canonical-src="https://lh3.googleusercontent.com/wE-cz9__yHsdigV3v8wYoClZWEXm1zG4NlXRp4wNq2eAOsI4cy71vH9O-GdUnRhAUACN1zW2FPfV=s1200" style="max-width:100%;"></a>
+User can edit personal information in <code>Edit Profile</code> page. There's currently only one entry to access this page - hitting username / avatar on the <a href="file:///tmp/19.html#navigation">Navigation</a>. Editable information including:</p>
+<ul>
+<li>Avatar (optional): Accepted format: <code>jpeg</code>, <code>png</code>. Maximum size is 2Mb.</li>
+<li>First Name (required): described in <a href="file:///tmp/19.html#sign-up">Signup</a>.</li>
+<li>Last Name (required): described in <a href="file:///tmp/19.html#sign-up">Signup</a>.</li>
+<li>Email (required): described in <a href="file:///tmp/19.html#sign-up">Signup</a>.</li>
+<li>Password (required): described in <a href="file:///tmp/19.html#sign-up">Signup</a>.</li>
+</ul>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>There has to be appropriate notification messages letting user know whether the operation is successful or failed.</li>
+</ul>
+<h2>
+<a id="user-content-admin-dedicated-features" class="anchor" href="file:///tmp/19.html#admin-dedicated-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Admin dedicated features</h2>
+<h3>
+<a id="user-content-manage-photos" class="anchor" href="file:///tmp/19.html#manage-photos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manage Photos</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f712d71334a55554a31627a5f30333041694166547073446f56354f58616b5a6f6d67454a6e734663396b624748417a43664c78726e347166533451723434746c7975315855725475337248583d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f712d71334a55554a31627a5f30333041694166547073446f56354f58616b5a6f6d67454a6e734663396b624748417a43664c78726e347166533451723434746c7975315855725475337248583d7331323030" alt=" " title="Manage Photos" data-canonical-src="https://lh3.googleusercontent.com/q-q3JUUJ1bz_030AiAfTpsDoV5OXakZomgEJnsFc9kbGHAzCfLxrn4qfS4Qr44tlyu1XUrTu3rHX=s1200" style="max-width:100%;"></a>
+Admin has the right to manage all existing Photos in the application even when their sharing modes are currently set to <code>private</code>.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>Paginate 40 items per page.</li>
+<li>Reuse <a href="file:///tmp/19.html#edit-photo">Edit Photo</a> page.</li>
+</ul>
+<h3>
+<a id="user-content-manage-albums" class="anchor" href="file:///tmp/19.html#manage-albums" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manage Albums</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6f7139784d616457672d4e316f734374445a70593246365a6673793039596a496841664c3175687a74437a757554665255736a4c4c4d435667654f4948666a4f49744e6d524d534f3469534c3d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6f7139784d616457672d4e316f734374445a70593246365a6673793039596a496841664c3175687a74437a757554665255736a4c4c4d435667654f4948666a4f49744e6d524d534f3469534c3d7331323030" alt=" " title="Manage Albums" data-canonical-src="https://lh3.googleusercontent.com/oq9xMadWg-N1osCtDZpY2F6Zfsy09YjIhAfL1uhztCzuuTfRUsjLLMCVgeOIHfjOItNmRMSO4iSL=s1200" style="max-width:100%;"></a></p>
+<p>Admin has the right to manage all existing Albums in the application even when their sharing modes are currently set to <code>private</code>.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>Paginate 40 items per page.</li>
+<li>Reuse <a href="file:///tmp/19.html#edit-album">Edit Album</a> page.</li>
+</ul>
+<h3>
+<a id="user-content-manage-users" class="anchor" href="file:///tmp/19.html#manage-users" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manage Users</h3>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f595664797144425f314e51654375775f65417a786a624b7a707943494f774d434772467573657467666550786e464566563464457751756d3868723030614e31596f6f756d52306173337a663d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f595664797144425f314e51654375775f65417a786a624b7a707943494f774d434772467573657467666550786e464566563464457751756d3868723030614e31596f6f756d52306173337a663d7331323030" alt=" " title="Manage Users" data-canonical-src="https://lh3.googleusercontent.com/YVdyqDB_1NQeCuw_eAzxjbKzpyCIOwMCGrFusetgfePxnFEfV4dEwQum8hr00aN1YooumR0as3zf=s1200" style="max-width:100%;"></a>
+Admin has the right to manage all existing users in the application. Available actions are:</p>
+<ul>
+<li>Permanently delete a user.</li>
+<li>Update personal information of a user.</li>
+<li>Temporarily set a user to be inactive / active.</li>
+</ul>
+<p><a href="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f7532356f76436632597447615f50714c37674c6e657574696f706d6f656c4a50447778696e534142646f3052334e72777a326d77717433523133727752596c644e424f312d5133366e7539383d7331323030" target="_blank" rel="nofollow"><img src="./NUS_Training_Final_App_Requirement_0_1_files/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f7532356f76436632597447615f50714c37674c6e657574696f706d6f656c4a50447778696e534142646f3052334e72777a326d77717433523133727752596c644e424f312d5133366e7539383d7331323030" alt=" " title="Admin edit user" data-canonical-src="https://lh3.googleusercontent.com/u25ovCf2YtGa_PqL7gLneutiopmoelJPDwxinSABdo0R3Nrwz2mwqt3R13rwRYldNBO1-Q36nu98=s1200" style="max-width:100%;"></a></p>
+<p><strong>Advanced requirements:</strong></p>
+<ul>
+<li>Send notification email after a user is deleted / set inactive. The user can no longer log into the application afterward.</li>
+</ul>
+<h3>
+<a id="user-content-navigation" class="anchor" href="file:///tmp/19.html#navigation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Navigation</h3>
+<p>The navigation bar might look different depending on current logged-in user. Specifically, its elements are:</p>
+<ul>
+<li>For Guests: Fotobook logo and login link.</li>
+<li>For logged-in users: Fotobook logo, avatar, username and logout link.</li>
+<li>For Admins: Fotobook Admin, avatar, username and logout link.</li>
+</ul>
+<p>Users will be directed to <a href="file:///tmp/19.html#edit-profile">Edit Profile</a> page if they click on avatar or username.</p>
+<p><strong>Technical notes:</strong></p>
+<ul>
+<li>For users who haven't had an avatar yet, we use initial characters of their first and last name to create a default one for them.</li>
+</ul>
+<p><strong>Advanced requirements:</strong></p>
+<ul>
+<li>Implement search box for Photo and Album. The results will be separated into two groups and displayed as in <a href="file:///tmp/19.html#feeds">Feeds</a>.</li>
+<li>Notifications when someone likes your Photo / Album.</li>
+</ul>
+<h2>
+<a id="user-content-best-practices" class="anchor" href="file:///tmp/19.html#best-practices" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Best Practices</h2>
+<blockquote>
+<p>1/ Inline javascript is prohibited. Use Javascript Object pattern for managing Javascript code.</p>
+<p>2/ Don’t hard-code text and path / url. Must use I18n and UrlHepler (JS-Route at client side).</p>
+<p>3/ Don’t rescue Exception.</p>
+<p>4/ Shouldn’t have N+1 query issue.</p>
+<p>5/ Don’t use instance variables (<code>@</code>) in partial view.</p>
+<p>6/ Don’t use inline style, internal css.</p>
+<p>7/ Only use <code>respond_to do |format|</code> (in controller) when we really need. Don’t use it in the wrong way.</p>
+<p>8/ Do not declare method option for <code>link_to</code> if the method is <code>get</code>.</p>
+<p>9/ When using <code>cancancan</code>: load / authorize resource automatically, don't do that manually.</p>
+<p>10/ The description of Unit Test example should be clear and meaningful. Don’t write general descriptions like: “should work”, “should not work”.</p>
+<p>11/ Never update a migration which has been pushed.</p>
+<p>12/ When using I18n-js: only put the translations which we need to use in JS to the JS translation file.</p>
+<p>13/ Do not declare method option for <code>form_tag</code> if the method is <code>post</code>.</p>
+<p>14/ The view should not contain any logics. Place them in helpers instead.</p>
+<p>15/ Do not commit the files which haven't been used by application on staging / production, or make any configurations without approval.</p>
+<p>16/ Follow RESTful for resources.</p>
+<p>17/ Use <code>I18n</code> as much as possible.</p>
+<p>18/ Do not use string concatenation in <code>CoffeeScript</code>, use interpolation instead.</p>
+<p>19/ Need to follow naming convention.</p>
+<p>20/ In javascript do not compare <code>.length &gt; 0</code>,  <code>a == true|false</code>, <code>a == ''</code></p>
+</blockquote>
+</article></body></html>
