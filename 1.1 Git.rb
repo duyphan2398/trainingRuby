@@ -1,14 +1,38 @@
-remove branch tren remove?
-
+remove branch tren remove? git push origin --delete <>
 thuc thanh them git stash
-
 so sanh git pull vs git fetch
-
 so sanh git merge vs git rebase
 
 =====================
 Giả sử git repo của bạn có 2 branch là master, develop
 Bạn đang đứng ở branch develop, làm sao để up-to-date branch master vào branch develop mà không cần checkout sang branch master
+
+
+git fetch master
+git merge 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -->
 git fetch origin
 git merge origin/master
@@ -47,8 +71,6 @@ b) git merge feature_1
 -->
 Câu a) dùng để merge branch hiện tại với branch "feature_1" ở remote.
 Câu b) dùng để merge branch hiện tại với branch "feature_1" ở local
-
-
 Khi nào bạn không nên sử dụng "git rebase"
 -->
 Khi làm việc trên 1 branch mà có nhiều người cùng phát triển branch này song song với mình thì không nên dùng "git rebase". Trường hợp thứ 2 không nên dùng "git rebase" là git rebase tạo những conflict liên tục, khi đó ta nên abort rebase process và dùng git merge
