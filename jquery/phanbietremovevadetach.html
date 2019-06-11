@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tiêu đề</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+.yellow { background-color: yellow; }
+.blue { background-color: blue; }
+</style>
+<script>
+$(function(){
+     $("div").click(function(){
+          $(this).toggleClass("blue");
+     });
+     
+    var div = $("div");
+    
+    $('.removeToggle').click(function(){
+        if ( div ) {
+            div.appendTo("body");
+            div = null;
+        } else {
+            div = $("div").remove();
+        }
+    });
+    
+    $('.detachToggle').click(function(){
+        if ( div ) {
+            div.appendTo("body");
+            div = null;
+        } else {
+            div = $("div").detach();
+        }
+    });
+});
+</script>
+</head>
+
+<body>
+<div class="yellow">Thành phần div</div>
+<button class="removeToggle">remove toggle</button>
+<button class="detachToggle">detach toggle</button>
+</body>
+</html>
