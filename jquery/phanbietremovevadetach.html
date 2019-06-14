@@ -12,11 +12,11 @@
 $(function(){
      $("div").click(function(){
           $(this).toggleClass("blue");
-     });
+     });                                                //khi click vào div thì sẽ đổi màu 
      
     var div = $("div");
     
-    $('.removeToggle').click(function(){
+    $('.removeToggle').click(function(){    //khi click vào removeToogle  nếu có tồn tại 
         if ( div ) {
             div.appendTo("body");
             div = null;

@@ -1,0 +1,8 @@
+string: lấy từng phần tử 
+Khởi tạo 1 sự kiện mới và thêm effect
+Xóa thẻ con của 1 element cha và giữ lại content
+Sự kiện off 1 sự kiện khác 
+each một object
+trigger
+keypress keydown
+bind thêm 1 sự kiện 
