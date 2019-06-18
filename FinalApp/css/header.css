@@ -1,0 +1,20 @@
+ header{
+        background-color: #3c5899;
+        height: 45px;
+}
+
+
+.header{
+        height:45px;
+}
+     
+.header:hover{
+        background-color: #5c77b6;
+        border-radius: 3px;
+}
+.header:active{
+		background-color: #3c5899;
+}
+.navbar-brand {
+        font-size: 25px
+}

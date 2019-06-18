@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Login</title>
+        <!-- Link Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <!-- Link css header -->
+        <link rel="stylesheet" type="text/css" href="./css/header.css">
+        <style type="text/css">
+            body{
+              background-color: white
+            }
+            h1  {
+              color: #3c5899;
+              transition: transform .2s;
+              text-align:center;
+            }
+            h1:hover{
+              transform: scale(1.1); 
+            }
+            main{
+              background-color: #d5ccccb5;
+              width: 30%;
+              height: 120%;
+              padding: 25px;
+              margin-left: auto;
+              margin-right: auto;
+              border-radius: 6px;
+              box-shadow: 5px 10px 8px #888888;
+            }
+            input.btn{
+              background-color: #3c5899;
+              color: white;
+              transition: transform .1s;
+            }
+            input.btn:hover{
+              background-color: #5c77b6;
+              transform: scale(1.15); 
+            }
+            input.btn:active{
+              background-color: #3c5899;
+              transform: scale(1.05); 
+            }
+            .form-control{
+              border: 1px solid #00000000;
+              
+            }
+        </style>   
+   </head>
+
+
+   <body>
+      <!-- HEADER -->
+      <header>
+        <div class="container">
+          <div class="row"> 
+            <div class="col-sm-5 col-md-7">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-3 col-lg-3">
+
+                    <a class="navbar-brand text-white   mr-2 header float-right" style="height:45px;" href="#"><b>Fotobook</b></a>
+                  </div>
+
+                  <div class="col-sm-9 col-lg-9">
+                    <input class="form-control mt-1 h-75" type="search" placeholder="Search Photo/Album" aria-label="Search">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                  <div class="d-flex  align-items-center header" style="height:45px;">
+                    <!-- Hình đại diện -->
+                    <!-- <img src="https://picsum.photos/35/35" class="rounded-circle ">
+                    <a class="nav-link text-white p-1 mr-md-3 "style="font-size: 14px" href="#"><b>Duy Phan</b></a> -->
+                  </div>    
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link text-white header pt-2" style="height:45px;   font-size: 17px" href="#"><b>Log in</b> </a>
+                </li>
+              </ul>
+            </div>
+          </div>  
+        </div>
+      </header>
+
+      <h1 class="mt-5 mb-5">Fotobook Login</h1>
+
+      <!-- MAIN -->
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-sm-12 col-lg-10">
+              <form>
+                <div class="text-center">
+                  <img  class="m-2 mb-lg-5" src="./css/images/user.png">
+                </div>
+                  <div  class="form-group">
+                  <input  class="form-control"type="text" placeholder="Password" name="" required>
+                  <input  class="form-control"type="text" placeholder="Last Name" name="" required>
+                </div>
+                <div class="text-center">
+                  <input class="btn mt-2 mb-4 w-40" type="submit" value="Login" name="1" >
+                </div>
+                <div class="text-center ">
+                  <a href="#">Forgot password?</a>
+                </div>
+              </form> 
+
+            </div>
+
+          </div>
+
+        </div>  
+
+      </main>
+
+      <div class="text-center mt-2">
+          <a href="#">Create an account</a>
+      </div>
+  </body>
+</html>
