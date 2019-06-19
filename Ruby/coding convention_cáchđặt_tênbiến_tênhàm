@@ -1,0 +1,70 @@
+1_Các quy tắc chung
+
+  Dùng 2 space
+  Dùng space trước và sau + - * / { } =
+  Không dùng space sau  (  [  và trước dấu  ]  )
+  Thêm dấu _ ở các số lớn  ví dụ: 100000  ->  100_000
+
+
+2_Cú pháp
+
+  gọi và khia báo hàm  , có dùng ( ) khi có tham số và không khi không có nhận tham số
+
+
+3_Câu điều kiện
+
+  Dùng && hoặc || thây cho and or
+  Dùng unless thay cho if not
+  Không dùng unless...else...
+  Không dùng (  ) trong câu if  , unless
+  Dùng các hàm số có sẵn như x.even?,x.odd?, x.nil?, x.zero? thay cho các câu so
+    sánh x % 2 == 0, x % 2 == 1, x == nil, x == 0.
+  Khi thân câu điều kiện có 1 statement thì dùng cú pháp 1 dòng như
+    do ..... if ...
+
+
+4_Lệnh lặp
+
+  Hạn chế dùng for, nên dùng each
+  Dùng until thay cho white not
+
+
+5_Khai báo và gọi hàm
+
+  Bỏ ( ) khi gọi hàm không tham số
+  Nếu hàm có tham số thì bỏ trong  doSth(var1, var2)
+
+
+6_Quy tắc đặt tên
+
+Tên biến, tên hàm, symbol: a_var_name, get_prime, a_symbol.
+Tên class, module: SomeClass, SomeModule
+Hằng số: SOME_CONST
+
+
+
+Biến cục bộ (local variable)
+  Khai báo bằng CHỮ CÁI THƯỜNG , có phạm vi tại vị trí khai báo
+
+Biến toàn cục (global variable)
+  Khai báo bàng dấu $ và chữ cái thường , có phạm vị global
+Biến đối tượng (instance variable)
+  Biến bắt dầu bằng @ và chữ cái thường , có phạm vi trong 1 lớp hoặc 1 đối tượng
+Biến lớp (class variable)
+  Biến  bắt đầu bằng @@ và tên biến , được dùng chung cho 1 class và 1 nhóm đối tượng có cùng kiểu
+Hằng (constant)
+  Biến hằng viết CHỮ IN , có giá trị không đổi ( co thể thây đổi giá trị của biến, chương trình sẽ warning )
+
+
+7_ String.
+  Dùng #{} thay cho nối chuỗi. Ví dụ: email_with_name = "#{user.name}
+    <#{user.email}>.
+  Dùng %Q để khai báo chuỗi có ', ”, #{}.
+  Dùng + để cắt khi chuỗi quá dài.
+
+
+
+
+
+
+
