@@ -1,0 +1,61 @@
+Cài RVM :
+ Install
+Pre-requisites
+You need software-properties-common installed in order to add PPA repositories.
+
+If not installed, open a terminal (Ctrl+Alt+T) and run:
+
+sudo apt-get install software-properties-common
+1. Add the PPA and install the package
+Open a terminal (Ctrl+Alt+T) and run:
+
+sudo apt-add-repository -y ppa:rael-gc/rvm
+sudo apt-get update
+sudo apt-get install rvm
+2. Change your terminal window
+Now, in order to always load rvm, change the Gnome Terminal to always perform a login.
+
+At terminal window, click Edit > Profile Preferences, click on Title and Command tab and check Run command as login shell.
+
+Terminal Screenshot
+
+3. Restart
+A lot of changes were made (scripts that needs to be reloaded, you're now member of rvm group) and in order to properly get all them working, you need to reboot. This requires not only close terminal, but restart your system.
+
+4. Install a ruby
+Now you're ready to install rubies. Open a terminal (Ctrl+Alt+T) and run:
+
+rvm install ruby
+rvm install ruby-2.3.1
+rvm install ruby-2.3
+.....
+
+
+Hiển thị các version của ruby : rvm list
+Sử dụng version của ruby : rvm use sốversion
+Thiết lập mặc định cho ruby version : rvm  use sốversion --default
+
+
+
+
+Chuyển sang version
+Tạo gemset : rvm gemset create têngemset
+Sử dụng gemset : rvm use 2.1.1@tengemset
+
+Đứng tại gemset
+Cài gem cho gemset : gem install têngem
+HIển thị gem : gem list
+
+
+
+
+Tạ folder Project và cd vào
+set ruby verson mặc định cho project: rvm --ruby-version use 2.6.3
+
+set gemset : rvm --ruby-version use tengemset
+
+
+
+
+
+
