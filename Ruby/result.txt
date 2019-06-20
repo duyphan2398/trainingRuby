@@ -1,0 +1,53 @@
+-Ruby có hỗ trợ  ++, nhưng khác với toán tử ++ của các ngôn ngữ khác
+
+
+
+
+
+- Tìm hiểu cấu trúc If else unless trong Ruby, ví dụ 1 đoạn code kiểm tra có xem được phim 18+ hay không?
+
+vd:
+
+age = 18
+
+if age>=18
+  puts "Welcome"
+else
+  puts "Please go home with mom "
+end
+
+
+unless age>=18
+  puts "Please go home with mom"
+else
+  puts "Welcome"
+end
+
+
+
+- Tìm hiểu cấu trúc lặp trong Ruby, ví dụ duyệt qua 1 mảng các số nguyên và in ra số nguyên
+for i in 0..5
+  puts "Số: #{i}"
+end
+
+
+-Tìm hiểu cách viết 1 function(method), viết thử 1 function tính bội số chung nhỏ nhất của 2 số nguyên dương
+
+def lcm(a,b)
+  arr = [a,b].reduce(:lcm)
+  return arr
+end
+
+
+-Tìm hiểu cách catch Exception trong Ruby, cho 1 ví dụ cụ thể có đầy đủ begin, rescue, ensure
+vd:
+
+begin
+  a = 5/0
+rescue Exception => e
+  puts e.message #in lổi của chuong trính ra màn hình
+else
+  puts "else - chạy khi Không có bất kỳ ngoại lệ nào"
+ensure
+  puts "ensure - luôn chạy dù có bất kỳ ngoại lệ nào"
+end
