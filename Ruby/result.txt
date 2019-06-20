@@ -34,7 +34,7 @@ end
 -Tìm hiểu cách viết 1 function(method), viết thử 1 function tính bội số chung nhỏ nhất của 2 số nguyên dương
 
 def lcm(a,b)
-  arr = [a,b].reduce(:lcm)
+  arr = a.lcm(b)
   return arr
 end
 
