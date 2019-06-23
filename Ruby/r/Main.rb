@@ -1,21 +1,32 @@
-class Person
-  def initialize(age)
-    @age = age
-  end
-  def age
-    @age
-  end
-  def compare_age(c)
-    if c.age > age
-      "The other object's age is bigger."
-    else
-      "The other object's age is the same or smaller."
-    end
-  end
-  protected :age
+
+
+MR_COUNT = 0
+
+module Foo
+MR_COUNT = 1
 end
 
-chris = Person.new(25)
-marcos = Person.new(34)
-puts chris.compare_age(marcos)
-#puts chris.age
+class Bar
+MR_COUNT = 2
+
+def practice
+  puts MR_COUNT
+# làm sao để truy xuất constant MR_COUNT của class Bar
+
+
+# làm sao để truy xuất constant MR_COUNT của module Foo
+# làm sao để truy xuất constant MR_COUNT của global environment
+puts $MR_COUNT
+end
+
+
+
+
+
+end
+
+
+
+a = Bar.new
+
+a.practice

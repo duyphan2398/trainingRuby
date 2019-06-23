@@ -1,0 +1,60 @@
+	
+1. Cài đặt rails
+Rails chỉ hỗ trợ phiên bản Ruby 2.2 trỡ lên 
+Trước khi cài Rails, phải cài Ruby và SQLite3
+Cài đặt Rails 
+	gem install rails 
+	rails --version
+
+
+..
+
+3.2 Tạo Application Blog
+Ruby cung cấp bộ khung chương trình để hỗ trợ làm việc với rails 
+. Để sử dụng bộ khung này, phải tạo ra thư mục project 
+	rails new <tênkhung>
+	cd <tênkhung>
+Sau khi chạy lệnh, rails sẽ tạo ra 1 thực mục với các file hỗ trợ của rails trong đó.
+
+Tập trung vào các thư mục chính 
+
+app/  : chứa controllers, models, views, helpers, các tài nguyên của chương trình
+
+bin/ :chứa lệnh rails để bắt đầu chương trình, đề setup, update, deploy... ứng dụng 
+
+
+config/ :để thiết lập routes, database... 
+
+db/ :bao gồm database schema <>database migrations
+
+lib/ : thêm các modules cho chương trình
+
+....và còn nhiều thư mục nữa 
+
+
+4. Hello, Rails
+
+Để chạy server của rails 
+	bin/rails server
+địa chỉ mặc định là localhost:3000
+
+
+4.1 Tạo chương trình 
+Để chạy chương trình , cần ít nhất 1 view và 1 controler
+
+Controller giúp nhận những request cho ứng dụng. Routing quyết định controller nào nhận thực hiện yêu cầu, thường có nhiêu route đến mỗi controller và các route khác nhau có thể thực hiện bằng nhiều bằng nhiều hành động khác nhau.
+
+View để hiện thị thông tin của UI để ng dùng sử dụng và sử dụng eRuby(Ruby nhúng ) sử lý yêu cầu để gửi thông tin đến người dùng 
+
+
+CHạy lệnh tạo Controller,  và tạo file chủ là Index  ....(Welcome: tên controller index: tên index)
+	bin/rails generate controller Welcome index
+
+Sau khi chạy lệnh sẽ tạo ra nhiều file, tập trung vào file 
+
+app/controllers/we
+
+
+
+
+	
