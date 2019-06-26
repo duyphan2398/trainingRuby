@@ -1,0 +1,37 @@
+Chuyển từ sqlite3 => mysql
+
+
+Sửa trong Gemfile
+  gem 'mysql2', '~> 0.4.4'
+
+Chạy bundle install  để cập nhât gemfile
+
+
+Coppy và sửa tron database.yml
+
+
+  default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 45tgbhu89
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: login_app_development                               #tên db dev
+
+test:
+  <<: *default
+  database: login_app_test                                       #tên db test
+
+production:
+  <<: *default
+  database: login_app_production
+  username: login_app
+  password: <%= ENV['LOGIN_APP_DATABASE_PASSWORD'] %>
+
+
+Sau đó chạy lệnh  rake db:create      để tạo ra db
+

@@ -52,7 +52,67 @@ CHạy lệnh tạo Controller,  và tạo file chủ là Index  ....(Welcome: t
 
 Sau khi chạy lệnh sẽ tạo ra nhiều file, tập trung vào file 
 
-app/controllers/we
+controler app/controllers/welcome_controller.rb
+
+view app/views/welcome/index.html.erb    <== viết code html/css
+
+4.3 Thiết lập trang homepage
+
+Mở file config/routes
+thêm vào dòng root 'welcome#index'  <=== chỉ request đến controler welcome và lấy path welcome/index
+
+
+
+5. Getting up and Running 
+Tài nguyên được hiểu là 1 đối tượng như người. vật hay đoạn văn bản, để tạo ra 1 đối tượng, thêm vào config/routes.rb 
+
+	
+	Rails.application.routes.draw do
+	  get 'welcome/index'
+	 
+	  resources :articles
+	 
+	  root 'welcome#index'
+	end
+
+Khi chạy lệnh bin/rails routes , có thể thấy các đường dẫn theo phương thức get, post cho đối tượng mới. 
+
+5.1 Laying down the groundwork
+Cần đường dẫn mới vào new article,   thông qua đường linh localhost:3000/articles/new
+
+Khi vào đường link sẽ bị lổi 
+		uninitialized constant ArticlesController
+
+Cần 1 controller để đảm nhận cái yêu cầu này. Giải phép là tạo ra controller
+
+	bin/rails generate controller Articles
+
+Khi mở file app/controllers/articles_controller.rb sẽ thấy nội dung là 1 class kế thừa ApplicatinController 
+
+Trong controller là các phương thức để thực hiện các Request 
+
+Khi tiếp tục gõ link  http://localhost:3000/articles/new sẽ bị lỗi action"new" , lỗi này vì chưa có phương thức new . Giải pháp là tạo phương thức new
+
+	class ArticlesController < ApplicationController
+	  def new
+	  end
+	end
+
+Sau khi tạo, tiếp tục F5, sẽ vẫn bị lỗi UnknowFormat. Rails mong muốn có view, khi không có views sẽ báo lỗi 
+
+Giải quyết cho vấn đề này là thêm vào articles/new.html 1 nội dung 
+
+
+
+5.2 First Form 
+
+
+
+
+5.5
+
+
+
 
 
 

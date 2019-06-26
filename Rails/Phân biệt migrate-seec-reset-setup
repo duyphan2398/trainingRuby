@@ -1,0 +1,4 @@
+db:migrate : để tạo các table trong csdl và chạy ra file schema
+db:seed : đọc dữ liệu trong file seed.rb và load vào csdl 
+db:setup:  tạo table trong csdl và load schema và seed
+db:reset:  = drop + set up ... đầu tiên là drop tất cả database sau đó đọc lại như lệnh set up 
