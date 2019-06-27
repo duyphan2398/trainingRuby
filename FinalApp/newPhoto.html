@@ -19,7 +19,7 @@
         border-top-left-radius: 9px;
         border-bottom-left-radius: 9px;
         background-color:#efe9e9;
-        margin-bottom: 2px;z`
+        margin-bottom: 2px;
         transition: transform .2s;
         box-shadow: 5px 10px 8px #888888;
         /*box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.1); */
@@ -265,12 +265,14 @@
             var obj = new FileReader();
             obj.onload = function(data){
 
-                   $('.images').prepend(' <div class="img float-left mt-2 mr-1"><div ng-repeat="file in imagefinaldata" class="img_wrp" class=""><img style="height: 180px;width:180px" src="' + data.target.result + '" class="imgResponsiveMax" alt="" /><img class="close m-1" src="./css/images/cl.png" onClick="click()"style="width:30px; height: 30px" /></div></div> ');
+                   $('.images').prepend(' <div class="img float-left mt-2 mr-1"><div ng-repeat="file in imagefinaldata" class="img_wrp"><img style="height: 180px;width:180px" src="' + data.target.result + '" class="imgResponsiveMax" alt="" /><img class="close m-1" src="./css/images/cl.png" onClick="click()"style="width:30px; height: 30px" /></div></div> ');
+                   $('.upload-btn-wrapper').css({ display: "none" });
                    $(document).ready(
                     function(){
                     $('img.close').click(
                       function(){
                         $(this).parent().parent().empty();
+                        $('.upload-btn-wrapper').css({ display: "block" });
                       }
                       )
                     })

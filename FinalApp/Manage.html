@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Manager</title>
+  <meta charset="utf-8">
+    <!-- Link Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- Link Css Header -->
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+
+
+    <style type="text/css">
+      body{
+            background-color: #d6bfbf24
+      }
+
+      .menu {
+        color: #9e9191;
+        transition: transform .2s;
+      }
+
+      .menu:hover {
+        color: #3c5899;
+        transform: scale(1.2);
+      }
+
+      .menu:active {
+        color: #9e9191;
+        transform: scale(1.05);
+      }
+     .sizePhotos {
+        height: 210px;
+        width: 100%;
+      }
+      .sizeAlbums {
+        height: 200px;
+        width: 200px;
+      }
+
+      .input-file-container {
+        position: relative;
+        width: 100px;
+      }
+      .js .input-file-trigger {
+        display: block;
+        padding: 5px 5px;
+        margin-top: 160px;
+        margin-left: 65px;
+        position: absolute;
+        z-index: 2;
+        background: white;
+        color: black;
+        font-size: 1em;
+        transition: all .4s;
+        cursor: pointer;
+        opacity: 0.4;
+      }
+      .js .input-file {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100px;
+        opacity: 0;
+        padding: 14px 0;
+        cursor: pointer;
+      }
+      .js .input-file:hover + .input-file-trigger,
+      .js .input-file:focus + .input-file-trigger,
+      .js .input-file-trigger:hover,
+      .js .input-file-trigger:focus {
+        background: white;
+        opacity: 0.8;
+      }
+      .tabcontent {
+
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+      img.album{
+        position:absolute;
+        border :1px solid white;
+        height:200px;
+        width:200px;
+        bottom: 40px;
+        top:40px;
+        margin-left:20px;
+
+
+      }
+      .card{
+        border-top-left-radius: 9px;
+        border-bottom-left-radius: 9px;
+        margin-bottom: 2px;
+        transition: transform .2s;
+        box-shadow: 0px 0px 5px #888888;
+        /*box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.1); */
+      }
+       .card:hover {
+          transform: scale(0.95);
+      }
+
+    </style>
+
+
+  <title>Edit My Profile</title>
+    <script type="text/javascript">
+        document.querySelector("html").classList.add('js');
+          function showImage(){
+            if(this.files && this.files[0])
+            {
+              var obj = new FileReader();
+              obj.onload = function(data){
+                var image = document.getElementById("image");
+                image.src = data.target.result;
+                image.style.display = "block"
+              }
+              obj.readAsDataURL(this.files[0]);
+
+            }
+        }
+
+    $(document).ready(function(){
+        $("img.album").each(function(){
+            if($(this).is(":first-child")) {
+              $(this).css("z-index" ,"2");
+              count =0;
+            }
+            else{
+              count++;
+              $(this).css("z-index" ,"1");
+              $(this).css("transform" ,"rotate("+count*20+"deg)");
+            }
+          })
+
+
+        $('a#btnFollow').click(function(){
+          if($(this).text() == "Follow"){
+            $(this).html("<b>Following</b>");
+            $(this).css("background-color", "#ffc107");
+            $(this).css("border-color", "white");
+            $(this).css("color", "white");
+          }else{
+            $(this).html("<b>Follow</b>");
+            $(this).css("background-color", "white");
+            $(this).css("border-color", "#ffc107");
+            $(this).css("color", "#ffc107");
+          }
+        });
+
+
+      });
+
+    /*Mở tab PHOTO VÀ ALBUM*/
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
+       }
+        openTab(event, 'ManagePhotos');
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5 col-md-7">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3 col-lg-3">
+                <a class="navbar-brand text-white mr-2 header float-right" href="#"><b>Fotobook</b></a>
+              </div>
+              <div class="col-sm-9 col-lg-9">
+                <input class="form-control mt-1 h-75" type="search" placeholder="Search Photo/Album" aria-label="Search">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-5 col-md-5">
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <div class="d-flex  align-items-center header">
+                <img src="https://picsum.photos/35/35" class="rounded-circle ">
+                <a class="nav-link text-white p-1 mr-md-3 "style="font-size: 14px" href="#"><b>Duy Phan</b></a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white header pt-2" style="  font-size: 15px" href="#"><b>Log out</b> </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <br>
+
+
+  <main>
+    <div class="container-fluid">
+      <div class="row bg-white">
+        <div class="col-sm-3 col-lg-2">
+          <ul class="nav flex-column ml-sm-5">
+            <li class="nav-item">
+              <a onclick="openTab(event, 'ManagePhotos')"  class="nav-link menu"><b>Manage Photos</b></a>
+            </li>
+            <li class="nav-item">
+              <a onclick="openTab(event, 'ManageAlbums')"  class="nav-link menu" ><b>Manage Albums</b></a>
+            </li>
+            <li class="nav-item">
+              <a onclick="openTab(event, 'ManageUsers')"  class="nav-link menu"><b>Manage Users</b></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-8 col-lg-9" style="background-color: white; margin-bottom: 500px">
+
+          <div id="ManagePhotos" class="row tabcontent">
+            <div class="container">
+              <div class="row text-center">
+
+
+
+
+                <div class="  col-sm-6  col-lg-3 text-center float-left mt-4" style="width:50%; display: block;">
+                  <div class="card">
+                    <div class="sizePhotos d-flex justify-content-center text-center">
+                      <img class="rounded sizePhotos" style="position: absolute; z-index: 0;" src="./css/images/2.jpg">
+                      <p class="p-1 rounded" style="color:white;width: 100%; position: absolute; z-index: 1; opacity: 0.8;background-color: #000000a3">title albums abc def</b></p>
+                      <a href=""><img src="./css/images/edit.png" style="color:white;font-size: 30px;position: absolute; z-index: 2; margin-left: 80px; margin-top: 1px; opacity: 0.8; height: 20px; width:20px "></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="ManageAlbums" class="row tabcontent" style="display:none">
+            <div  class="container">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                  <div class=" d-flex justify-content-center m-0 text-center">
+                    <img class="rounded-sm album" src="./css/images/2.jpg">
+                    <img class="rounded-sm album" src="./css/images/2.jpg">
+                    <img class="rounded-sm album" src="./css/images/2.jpg">
+                    <img class="rounded-sm album" src="./css/images/2.jpg">
+
+
+
+                    <p class="rounded bg-secondary p-1" style="width: 200px; position: absolute; z-index: 4; margin-top: 0px; opacity: 0.8">title albums abc def</b></p>
+                    <i class="fa fa-edit bg-secondary" style="font-size: 30px;position: absolute; z-index: 5; margin-left: 105px; margin-top: 0px; opacity: 0.8"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="ManageUsers" class="row tabcontent" style="display:none">
+            <div  class="container">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Last Login</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Thuan 1</th>
+                    <td>Vu</td>
+                    <td>dinhthuan1@gmail.com</td>
+                    <td>1/1/2019</td>
+                    <td><button class="btn btn-success mr-2">Edit</button><button class="btn btn-danger">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Thuan 2</th>
+                    <td>Vu</td>
+                    <td>dinhthuan2@gmail.com</td>
+                    <td>1/1/2019</td>
+                    <td ><button class="btn btn-success mr-2">Edit</button><button class="btn btn-danger">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Thuan 3</th>
+                    <td>Vu</td>
+                    <td>dinhthuan3@gmail.com</td>
+                    <td>1/1/2019</td>
+                    <td><button class="btn btn-success mr-2">Edit</button><button class="btn btn-danger">Delete</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

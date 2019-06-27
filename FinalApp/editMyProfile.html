@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <!-- Link Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- Link Css Header -->
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+
+    <style type="text/css">
+      body{
+            background-color: #d6bfbf24
+      }
+
+      .menu {
+        color: #9e9191;
+        transition: transform .2s;
+      }
+
+      .menu:hover {
+        color: #3c5899;
+        transform: scale(1.2);
+      }
+
+      .menu:active {
+        color: #9e9191;
+        transform: scale(1.05);
+      }
+      .input-file-container {
+  position: relative;
+  width: 100px;
+}
+.js .input-file-trigger {
+  display: block;
+  padding: 5px 5px;
+  margin-top: 160px;
+  margin-left: 65px;
+  position: absolute;
+  z-index: 2;
+  background: white;
+  color: black;
+  font-size: 1em;
+  transition: all .4s;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.js .input-file {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100px;
+  opacity: 0;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.js .input-file:hover + .input-file-trigger,
+.js .input-file:focus + .input-file-trigger,
+.js .input-file-trigger:hover,
+.js .input-file-trigger:focus {
+  background: white;
+  opacity: 0.8;
+}
+
+    </style>
+
+
+  <title>Edit My Profile</title>
+    <script type="text/javascript">
+        document.querySelector("html").classList.add('js');
+          function showImage(){
+            if(this.files && this.files[0])
+            {
+              var obj = new FileReader();
+              obj.onload = function(data){
+                var image = document.getElementById("image");
+                image.src = data.target.result;
+                image.style.display = "block"
+              }
+              obj.readAsDataURL(this.files[0]);
+
+            }
+        }
+
+    $(document).ready(function(){
+
+
+        $('a#btnFollow').click(function(){
+          if($(this).text() == "Follow"){
+            $(this).html("<b>Following</b>");
+            $(this).css("background-color", "#ffc107");
+            $(this).css("border-color", "white");
+            $(this).css("color", "white");
+          }else{
+            $(this).html("<b>Follow</b>");
+            $(this).css("background-color", "white");
+            $(this).css("border-color", "#ffc107");
+            $(this).css("color", "#ffc107");
+          }
+        });
+      });
+
+
+
+
+    </script>
+</head>
+<body>
+   <header>
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-5 col-md-7">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-lg-3">
+            <a class="navbar-brand text-white mr-2 header float-right" href="#"><b>Fotobook</b></a>
+          </div>
+          <div class="col-sm-9 col-lg-9">
+            <input class="form-control mt-1 h-75" type="search" placeholder="Search Photo/Album" aria-label="Search">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-5 col-md-5">
+      <ul class="nav nav-pills float-right">
+        <li class="nav-item">
+          <div class="d-flex  align-items-center header">
+            <img src="https://picsum.photos/35/35" class="rounded-circle ">
+            <a class="nav-link text-white p-1 mr-md-3 "style="font-size: 14px" href="#"><b>Duy Phan</b></a>
+        </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white header pt-2" style="  font-size: 15px" href="#"><b>Log out</b> </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    </div>
+    </header>
+    <br>
+    <main>
+      <div class="container-fluid">
+        <div class="row bg-white">
+          <div class="col-sm-3 col-lg-2">
+            <ul class="nav flex-column ml-sm-5">
+                <li class="nav-item">
+                  <a onclick="openTab(event, 'PHOTO')"class="nav-link menu"  href="#"><b>Feeds</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu" href="./discover.html"><b>Discover</b></a>
+                </li>
+
+            </ul>
+          </div>
+
+          <div class="col-sm-8 col-lg-9" style="background-color: white">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <h5 class="pt-4">Edit User Profile</h5>
+                  <hr>
+                  <form class="pl-5 ml-lg-5">
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5" style="  height: 210px;">
+                <div class="input-file-container" style="display: block;">
+                  <img class="rounded-lg" src="./css/images/1.jpg" width="200px" height="200px" style="position: absolute; z-index: 0;" id="image" >
+                  <input class="input-file" id="my-file" type="file" style="position: absolute; z-index: 1; margin-top: 160px;" onchange="showImage.call(this);">
+                  <label tabindex="0" for="my-file" class="input-file-trigger">CHANGE</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5">
+                <h4 class="text-primary">Basic information</h4>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="editFirstName" class="col-md-3 col-form-label d-flex justify-content-end"><b>First name</b></label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" id="editFirstName" placeholder="First Name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="editLastName" class="col-md-3 col-form-label d-flex justify-content-end"><b>Last name</b></label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" id="editLastName" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="editEmail" class="col-md-3 col-form-label d-flex justify-content-end"><b>Email</b></label>
+              <div class="col-md-5">
+                <input type="Email" class="form-control" id="editEmail" placeholder="Someone@example.com">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5">
+                <button type="submit" class="btn btn-success">Save</button>
+              </div>
+            </div>
+          </form>
+
+          <form class="pl-5 ml-lg-5">
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5">
+                <h4 class="text-primary">Change password</h4>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="currentPsw" class="col-md-3 col-form-label d-flex justify-content-end"><b>Current Password</b></label>
+              <div class="col-md-5">
+                <input type="password" name="pwd" class="form-control" id="currentPsw" placeholder="**********">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="newPsw" class="col-md-3 col-form-label d-flex justify-content-end"><b>New Password</b></label>
+              <div class="col-md-5">
+                <input type="password" name="pwd" class="form-control" id="newPsw" placeholder="**********">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="verifyPsw" class="col-md-3 col-form-label d-flex justify-content-end"><b>Verify Password</b></label>
+              <div class="col-md-5">
+                <input type="password" name="pwd" class="form-control" id="verifyPsw" placeholder="**********">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5">
+                <button type="submit" class="btn btn-success">Save</button>
+              </div>
+            </div>
+          </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

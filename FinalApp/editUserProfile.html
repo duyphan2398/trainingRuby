@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Index</title>
+
+      <!-- Link Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- Link Css Header -->
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+      <style type="text/css">
+      body{
+            background-color: #d6bfbf24
+      }
+      a:not([href]):not([tabindex]){
+        color: #9e9191;
+        transition: transform .2s;
+      }
+      a:not([href]):not([tabindex]):hover {
+        color: #3c5899;
+        text-decoration: none;
+        transform: scale(1.2);
+        cursor :pointer;
+      }
+      a:not([href]):not([tabindex]):active {
+        color: #9e9191;
+        transform: scale(1.05);
+      }
+
+      .menu {
+        color: #9e9191;
+        transition: transform .2s;
+
+      }
+      .menu:hover {
+        color: #3c5899;
+        text-decoration: none;
+        transform: scale(1.2);
+        cursor :pointer;
+      }
+      .menu :active {
+        color: #9e9191;
+        transform: scale(1.05);
+      }
+      img.album{
+        position:absolute;
+        border :1px solid white;
+        height:150px;
+        width:150px;
+        align-self: center;
+
+
+
+      }
+      .card{
+          border:1px solid white;
+          border-top-left-radius: 9px;
+          border-bottom-left-radius: 9px;
+          background-color: white;
+          margin-bottom: 2px;
+          margin-top: 3px;
+          transition: transform .2s;
+
+        }
+        .card-following{
+
+          border:9px solid white;
+          border-radius: 9px;
+          background-color:#efe9e9;
+          transition: transform .2s;
+          box-shadow: 5px 10px 8px #888888;
+        }
+        .card:hover {
+          transform: scale(0.95);
+        }
+        .card-following:hover {
+          transform: scale(0.95);
+        }
+        .card-photo{
+          transition: transform .2s;
+        }
+        .card-photo:hover {
+          transform: scale(0.95);
+        }
+        .img_wrp {
+        display: inline-block;
+        position: relative;
+      }
+      .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+
+
+
+
+      </style>
+      <script type="text/javascript">
+        $(document).ready(function(){
+
+          /*Xoay hình*/
+          $("img.album").each(function(){
+            if($(this).is(":first-of-type") || $(this).is(":nth-of-type(2)")) {
+              $(this).css("z-index" ,"2");
+              count = 0;
+            }
+            else{
+              count++;
+              $(this).css("z-index" ,"0");
+              $(this).css("transform" ,"rotate("+count*20+"deg)");
+            }
+          })
+
+
+
+           /*Nút like */
+          $('img.like').click(function(){
+            if($(this).attr('src')=="./css/images/heart.png")
+            {
+              $(this).removeAttr("src");
+              $(this).attr('src',"./css/images/like.png");
+            }
+            else
+            {
+            $(this).removeAttr("src");
+            $(this).attr("src","./css/images/heart.png");
+            }
+         });
+        openTab(event,'PHOTOS');
+        });
+
+        /*Mở tab PHOTO VÀ ALBUM*/
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
+       }
+
+       /*Mở tab FEED VÀ DISCOVER*/
+
+
+
+
+
+      </script>
+   </head>
+   <body>
+      <!-- HEADER -->
+    <header>
+          <div class="container">
+              <div class="row">
+                <div class="col-sm-5 col-md-7">
+                    <div class="container">
+                      <div class="row">
+                          <div class="col-sm-3 col-lg-3">
+                            <a class="navbar-brand text-white   mr-2 header float-right" style="height:45px;" href="#"><b>Fotobook</b></a>
+                          </div>
+
+                          <div class="col-sm-9 col-lg-9">
+                            <input class="form-control mt-1 h-75" type="search" placeholder="Search Photo/Album" aria-label="Search">
+                          </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 col-md-5">
+                    <ul class="nav nav-pills float-right">
+                      <li class="nav-item">
+                          <div class="d-flex  align-items-center header" style="height:45px;">
+                            <!-- Hình đại diện -->
+                            <img src="https://picsum.photos/35/35" class="rounded-circle ">
+                            <a class="nav-link text-white p-1 mr-md-3 "style="font-size: 14px" href="#"><b>Duy Phan</b></a>
+                          </div>
+                      </li>
+
+                      <li class="nav-item">
+                          <a class="nav-link text-white header pt-2" style="height:45px;   font-size: 17px" href="#"><b>Log out</b> </a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </header>
+
+
+    <br class="m-2">
+
+<!-- MAIN -->
+    <main>
+      <div class="container-fluid">
+        <div class="row bg-white">
+          <div class="col-sm-3 col-lg-2">
+            <ul class="nav flex-column ml-sm-5">
+                <li class="nav-item">
+                  <a class="nav-link menu"  href="./index.html"><b>Feeds</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link menu" href="./discover.html"><b>Discover</b></a>
+                </li>
+
+            </ul>
+          </div>
+<!-- Feed and Disco -->
+          <div class="col-sm-8 col-lg-9" style="background-color: white">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 text-center">
+                  <img src="./css/images/2.jpg" class=" rounded-circle mt-4" style="height: 200px; width:200px">
+                </div>
+                <div class="col-lg-9 pt-4 float-left text-center text-lg-left">
+                  <img src="./css/images/heart.png">
+                  <h1>Doraemon</h1>
+
+                  <!-- <b><a class="menu" href="">1000 PHOTOS</a> | <a  class="menu" href="">1000 ALBUMS</a> | <a   class="menu" href="">1000 FOLLOWINGS</a> | <a   class="menu" href="">1000 FOLLOWERS</a></b> -->
+                  <ul class="list-style list-inline">
+                    <li class="list-inline-item">
+                      <a onclick="openTab(event, 'PHOTOS')" class="choose tablinks font-weight-bold">100 PHOTOS</b></a>
+                    </li>|
+                    <li class="list-inline-item">
+                      <a onclick="openTab(event, 'ALBUMS')" class="choose tablinks font-weight-bold" >1000 ALBUMS</a>
+                    </li>|
+                    <li class="list-inline-item">
+                      <a onclick="openTab(event, 'FOLLOWINGS')" class="choose tablinks font-weight-bold">1000 FOLLOWINGS</a>
+                    </li>|
+                    <li class="list-inline-item">
+                      <a onclick="openTab(event, 'FOLLOWERS')" class="choose tablinks font-weight-bold">1000 FOLLOWERS</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+<!-- PHOTOS -->
+              <div id="PHOTOS" class="tabcontent">
+
+              <div class="row d-flex flex-row-reverse p-3">
+                <a class="btn btn-success float-right" href=""><b>Add Photo</b></a>
+              </div>
+              <div class="row mt-5">
+
+                <div class="img_wrp card-photo col-6 col-lg-3 text-center float-left mb-5" style="height: 200px; width:200px; ">
+
+                  <img src="./css/images/1.jpg" class="rounded" style="height: 200px; width:200px; ">
+
+                  <a href=""><img  src="./css/images/lock.png" class="mr-md-4 mr-lg-1 fa fa-lock rounded bg-secondary p-1" style="height:30px;width:30px;position: absolute; z-index: 2; right:35px;margin-top: 3px"></a>
+                  <a class="btn btn-secondary rounded mr-md-4 mr-lg-1 " style="position: absolute; z-index: 2;float: right; bottom: 8px; right: 35px; background-color: #ffffff78" href="#">EDIT</a>
+                  <p title="title">Day la hinh cua tao</p>
+                </div>
+
+
+
+
+
+              </div>
+              </div>
+<!-- END PHOTOS -->
+
+
+
+<!-- ALBUMS -->
+              <div id="ALBUMS" class="tabcontent">
+
+              <div class="row mt-5">
+
+
+
+                <div class="col-6 col-lg-3 card float-left text-center mb-5 mt-3" style="width: 18rem; position:relative;">
+                  <div style="z-index:10;position: absolute;color: red;align-self: center;" class="text-center ">
+                    <div style="z-index:10;position: absolute;transform: translate(-50%, -50%);align-self: center; top:70px" >Chữ</div>
+                  </div>
+                  <img src="./css/images/2.jpg" class="album card-img-top" style="opacity:0.07">
+
+
+
+                  <img class="album card-img-top" src="./css/images/1.jpg" alt="Card image cap">
+                  <img class="card-img-top album " src="./css/images/1.jpg" alt="Card image cap">
+                  <img class=" card-img-top album" src="./css/images/2.jpg" alt="Card image cap">
+                  <img class="card-img-top album" src="./css/images/3.jpg" alt="Card image cap">
+                  <img class="" src="./css/images/1.jpg" alt="Card image cap"
+                  style=" height:150px;
+                          width:150px;
+                          align-self: center;">
+
+
+                  <a href=""><img  src="./css/images/lock.png" class="mr-md-4 mr-lg-1 fa fa-lock rounded bg-secondary p-1" style="height:30px;width:30px;position: absolute; z-index: 10; right:55px;top:3px; "></a>
+                  <a class="btn btn-secondary rounded mr-md-4 mr-lg-1 " style="position: absolute; z-index: 10;float: right; bottom: 50px; right: 55px; background-color: #ffffff78" href="#">EDIT</a>
+
+
+
+                  <div class="card-body pt-4">
+                    <p class="card-text">Some quick example text </p>
+                  </div>
+                </div>
+
+
+
+              </div>
+              </div>
+<!-- END ALBUMS -->
+
+<!-- FOLLOWINGS -->
+              <div id="FOLLOWINGS" class="tabcontent">
+              <div class="row mt-5">
+
+
+
+                <div class="col-6 col-lg-3 card-following float-left">
+                  <div class="container text-center" >
+                    <div class="row mt-2 ">
+                      <div class="col-12">
+                        <img src="./css/images/2.jpg" class="card-img-top rounded-circle " style="height: 100px; width:100px;">
+                      </div>
+
+                    </div>
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <h5 class="card-title">
+                        DORAEMON
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        PHOTOS
+                      </div>
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        ALBUMS
+                      </div>
+                    </div>
+                    <div class="card-body mt-3 mb-2">
+                    <p class="card-text">Some quick example text </p>
+                  </div>
+                  </div>
+
+
+
+                </div>
+
+                <div class="col-6 col-lg-3 card-following float-left text-center" style="width: 10rem;">
+                  <div class="container" >
+                    <div class="row mt-2">
+                      <div class="col-12">
+                        <img src="./css/images/2.jpg" class="card-img-top rounded-circle " style="height: 100px; width:100px;">
+                      </div>
+
+                    </div>
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <h5 class="card-title">
+                        DORAEMON
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        PHOTOS
+                      </div>
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        ALBUMS
+                      </div>
+                    </div>
+                    <div class="card-body mt-3 mb-2">
+                    <p class="card-text">Some quick example text </p>
+                  </div>
+                  </div>
+
+
+
+                </div>
+
+                <div class="col-6 col-lg-3 card-following float-left text-center" style="width: 10rem;">
+                  <div class="container" >
+                    <div class="row mt-2">
+                      <div class="col-12">
+                        <img src="./css/images/2.jpg" class="card-img-top rounded-circle " style="height: 100px; width:100px;">
+                      </div>
+
+                    </div>
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <h5 class="card-title">
+                        DORAEMON
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        PHOTOS
+                      </div>
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        ALBUMS
+                      </div>
+                    </div>
+                    <div class="card-body mt-3 mb-2">
+                    <p class="card-text">Some quick example text </p>
+                  </div>
+                  </div>
+
+
+
+                </div>
+
+                <div class="col-6 col-lg-3 card-following float-left text-center" style="width: 10rem;">
+                  <div class="container" >
+                    <div class="row mt-2">
+                      <div class="col-12">
+                        <img src="./css/images/2.jpg" class="card-img-top rounded-circle " style="height: 100px; width:100px;">
+                      </div>
+
+                    </div>
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <h5 class="card-title">
+                        DORAEMON
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        PHOTOS
+                      </div>
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        ALBUMS
+                      </div>
+                    </div>
+                    <div class="card-body mt-3 mb-2">
+                    <p class="card-text">Some quick example text </p>
+                  </div>
+                  </div>
+
+
+
+                </div>
+
+
+
+              </div>
+              </div>
+<!-- END FOLOWINGS -->
+
+
+<!-- FOLLOWERS -->
+              <div id="FOLLOWERS" class="tabcontent">
+              <div class="row mt-5">
+
+
+
+                <div class="col-6 col-lg-3 card-following float-left">
+                  <div class="container text-center" >
+                    <div class="row mt-2 ">
+                      <div class="col-12">
+                        <img src="./css/images/2.jpg" class="card-img-top rounded-circle " style="height: 100px; width:100px;">
+                      </div>
+
+                    </div>
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <h5 class="card-title">
+                        DORAEMON
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        PHOTOS
+                      </div>
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        ALBUMS
+                      </div>
+                    </div>
+                    <div class="card-body mt-3 mb-2">
+                    <p class="card-text">Some quick example text </p>
+                  </div>
+                  </div>
+
+
+
+                </div>
+
+                <div class="col-6 col-lg-3 card-following float-left text-center" style="width: 10rem;">
+                  <div class="container" >
+                    <div class="row mt-2">
+                      <div class="col-12">
+                        <img src="./css/images/2.jpg" class="card-img-top rounded-circle " style="height: 100px; width:100px;">
+                      </div>
+
+                    </div>
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <h5 class="card-title">
+                        DORAEMON
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        PHOTOS
+                      </div>
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        ALBUMS
+                      </div>
+                    </div>
+                    <div class="card-body mt-3 mb-2">
+                    <p class="card-text">Some quick example text </p>
+                  </div>
+                  </div>
+
+
+
+                </div>
+
+                <div class="col-6 col-lg-3 card-following float-left text-center" style="width: 10rem;">
+                  <div class="container" >
+                    <div class="row mt-2">
+                      <div class="col-12">
+                        <img src="./css/images/2.jpg" class="card-img-top rounded-circle " style="height: 100px; width:100px;">
+                      </div>
+
+                    </div>
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <h5 class="card-title">
+                        DORAEMON
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        PHOTOS
+                      </div>
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        ALBUMS
+                      </div>
+                    </div>
+                    <div class="card-body mt-3 mb-2">
+                    <p class="card-text">Some quick example text </p>
+                  </div>
+                  </div>
+
+
+
+                </div>
+
+                <div class="col-6 col-lg-3 card-following float-left text-center" style="width: 10rem;">
+                  <div class="container" >
+                    <div class="row mt-2">
+                      <div class="col-12">
+                        <img src="./css/images/2.jpg" class="card-img-top rounded-circle " style="height: 100px; width:100px;">
+                      </div>
+
+                    </div>
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <h5 class="card-title">
+                        DORAEMON
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        PHOTOS
+                      </div>
+                      <div class="col-6">
+                        <h4>
+                          22
+                        </h4>
+                        ALBUMS
+                      </div>
+                    </div>
+                    <div class="card-body mt-3 mb-2">
+                    <p class="card-text">Some quick example text </p>
+                  </div>
+                  </div>
+
+
+
+                </div>
+
+
+
+              </div>
+              </div>
+<!-- END FOLLOWERS -->
+
+
+
+
+
+
+
+            </div>
+          </div>
+<!-- End FEED AND -->
+        </div>
+      </div>
+    </main>
+    </body>
+</html>
