@@ -1,0 +1,129 @@
+<% provide(:title, "Signup") %>
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Sign Up</title>
+        <style type="text/css">
+          body{
+              background-color: white
+            }
+            h1  {
+              color: #3c5899;
+              transition: transform .2s;
+              text-align:center;
+            }
+            h1:hover{
+              transform: scale(1.1);
+            }
+            main{
+              background-color: #d5ccccb5;
+              width: 30%;
+              height: 120%;
+              padding: 25px;
+              margin-left: auto;
+              margin-right: auto;
+              border-radius: 6px;
+              box-shadow: 5px 10px 8px #888888;
+            }
+            input.btn{
+              background-color: #3c5899;
+              color: white;
+              transition: transform .1s;
+            }
+            input.btn:hover{
+              background-color: #5c77b6;
+              transform: scale(1.15);
+            }
+            input.btn:active{
+              background-color: #3c5899;
+              transform: scale(1.05);
+            }
+        </style>
+   </head>
+
+
+   <body>
+      <!-- HEADER -->
+
+
+      <h1 class="mt-5 mb-4">Fotobook Signup</h1>
+
+
+
+
+
+
+      <!-- MAIN -->
+      <main class="mb-5">
+        <div class="container ">
+          <div class="row" >
+
+
+
+            <div class="col-lg-1"></div>
+            <div class=" col-sm-12 col-lg-10 " >
+
+
+              <%= form_with(model: @user, local: true) do |form| %>
+
+
+
+                <div class="form-group">
+                  <%= form.label :first_name, class: 'font-weight-bold'%>
+                  <%= form.text_field :first_name, class: 'form-control',placeholder: 'First Name' %>
+                  <!-- <label><b>First Name</b></label> <br>
+                  <input class="form-control " type="text" placeholder="First Name" name="" required> -->
+                </div>
+                <div  class="form-group">
+                  <%= form.label :last_name, class: 'font-weight-bold' %>
+                  <%= form.text_field :last_name, class: 'form-control',placeholder: 'Last Name' %>
+<!--                   <label><b>Last Name</b></label> <br>
+                  <input  class="form-control"type="text" placeholder="Last Name" name="" required> -->
+                </div>
+                 <div  class="form-group">
+                  <%= form.label :email, class: 'font-weight-bold' %>
+                  <%= form.text_field :email, class: 'form-control',placeholder: 'Email' %>
+                  <!-- <label><b>Email</b></label> <br>
+                  <input  class="form-control"type="text" placeholder="Email" name="" required> -->
+                </div>
+                <div  class="form-group">
+                  <%= form.label :password, class: 'font-weight-bold' %>
+                  <%= form.password_field :password, class: 'form-control',placeholder: 'Password' %>
+                  <!-- <label><b>Password</b></label> <br>
+                  <input  class="form-control"type="text" placeholder="Password" name="" required> -->
+                </div>
+                <div  class="form-group">
+                  <%= form.label :password_confirmation, class: 'font-weight-bold' %>
+                  <%= form.password_field :password_confirmation, class: 'form-control',placeholder: 'Password Confirmation' %>
+                  <!-- <label><b>Password Confirmation</b></label> <br>
+                  <input  class="form-control"type="text" placeholder="Password Confirmation" name="" required> -->
+                </div>
+                <div class="text-center actions">
+                   <%= form.submit 'Sign Up', class: 'btn mt-3 w-5 mb-4'%>
+                  <!-- <input class="btn mt-3 w-50" type="submit" value="Sign Up" name="1" > -->
+                </div>
+                <% if @user.errors.any? %>
+                  <div class="align-center" id="error_explanation" style="display: inline-block;">
+                    <% @user.errors.full_messages.each do |message| %>
+                    <div class="alert bg-danger text-white alert-dismissible fade show
+                    w-125" role="alert">
+                    <%= message%>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <br>
+                    <%end%>
+                  </div>
+                <%end%>
+
+                <%  flash.each do |name,msg| %>
+                    <%= content_tag :div, msg, class: "alert #{name}" %>
+                    <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </body>
+</html>
